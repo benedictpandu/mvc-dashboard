@@ -103,14 +103,14 @@
               </a>
             </li>
             <li>
-              <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="<?= BASEURL; ?>/users">
+              <a href="<?= BASEURL ?>/users" class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="<?= BASEURL; ?>/users">
                 Kelola User
               </a>
             </li>
           </ul>
         </div>
       </li>
-      
+
     </ul>
     <ul class="space-y-1.5">
       <li class="hs-accordion" id="users-accordion">

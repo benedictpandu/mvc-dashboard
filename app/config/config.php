@@ -1,5 +1,5 @@
 <?php
-define('BASEURL', 'http://localhost/mvc/public');
+define('BASEURL', 'http://localhost/mvc');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'postgres');
 define('DB_PASS', 'postgres');
