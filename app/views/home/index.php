@@ -1,3 +1,4 @@
+<?php Flash::flash(); ?>
 <div class="container-sm">
     <!-- Content -->
     <div class="w-full h-[93vh] lg:pl-72 z-[1] overflow-clip">
@@ -10,7 +11,5 @@
 setTimeout(function() {
 var f = document.querySelectorAll('iframe')[0];
 f.src = 'http://192.168.1.18:3000/public/dashboard/52bc6d76-c745-4581-9018-e2b15990efd3#theme=transparent&bordered=false&titled=true';
-console.log('FB loaded after 2s');
 }, 50);
-console.log('Started');
 </script>

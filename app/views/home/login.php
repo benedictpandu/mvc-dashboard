@@ -4,10 +4,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title><?= $data['title'] ?></title>
+    <title>Login Page</title>
     <link href="<?= BASEURL; ?> /css/output.css" rel="stylesheet">
 </head>
-
+<?php Flash::flash(); ?>
 <body class="dark:bg-slate-900 bg-gray-100 flex h-full items-center py-16">
     <main class="w-full max-w-md mx-auto p-6">
         <div class="mt-7 bg-white border border-gray-200 rounded-xl shadow-sm dark:bg-gray-800 dark:border-gray-700">
@@ -15,7 +15,7 @@
                 <div class="mt-5">
                     <img src="<?= BASEURL; ?>/img/logo.png" alt="">
                     <!-- Form -->
-                    <form>
+                    <form action="<?=BASEURL?>/login/auth" method="POST">
                         <div class="grid gap-y-4">
                             <!-- Form Group -->
                             <div>
@@ -70,6 +70,7 @@
         </div>
     </main>
     <script src="<?= BASEURL; ?>/preline/dist/preline.js"></script>
+    <script src="<?=BASEURL;?>/public/js/alert.js"></script>
 </body>
 
 </html>

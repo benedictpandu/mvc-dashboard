@@ -16,11 +16,5 @@ class Home extends Controller{
         $this->view('userManajemen',$data);
         $this->view('templates/footer');    
     }
-    
-    public function login(){
-        $data['title']="Home";
-        $this->view('templates/header',$data);
-        $this->view('home/login');
-        $this->view('templates/footer');
-    }
+
 }
