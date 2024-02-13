@@ -24,8 +24,30 @@ class LoginModel
             if(password_verify($password, $result['password'])){
                 $_SESSION["user"]["nama"] = $result["nama"];
                 $_SESSION["user"]["akses"]= $result["akses"];
+                $_SESSION["user"]["id"]= $result["id"];
+                $_SESSION["user"]["verified"]= $result["verified"];
                 return 1;
             }
         }
+    }
+    public function changePassword($data)
+    {
+        $query="SELECT * FROM users WHERE id=:id";
+        $password = password_hash($data['newPassword'], PASSWORD_BCRYPT);
+        $this->db->query($query);
+        $this->db->bind('id', $data["id"]);
+        $result = $this->db->singleSet();
+        if($result){
+            if(password_verify($data['oldPassword'], $result['password'])){
+                 $change_query = "UPDATE users SET password = :password, verified = TRUE WHERE id = :id";
+                $this->db->query($change_query);
+                $this->db->bind('password', $password);
+                $this->db->bind('id', $data['id']);
+                $this->db->execute();
+                return 1;
+            }
+        }
+        
+
     }
 }

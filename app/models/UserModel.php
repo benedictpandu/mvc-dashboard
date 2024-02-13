@@ -53,23 +53,18 @@ class UserModel
 
     public function editData($data)
     {
-        // $query = "SELECT * FROM users WHERE email = '" . $data['email'] . "'";
-        // $this->db->query($query);
-        // $result = $this->db->resultSet();
-        // if (empty($result)) {
-        $query = "UPDATE users SET nama = :nama, email = :email, akses = :akses WHERE id = :id";
+        $defaultPassword = password_hash('admin', PASSWORD_BCRYPT);
+        $query = "UPDATE users SET nama = :nama, email = :email, akses = :akses, password = :password, verified = FALSE WHERE id = :id";
         $this->db->query($query);
         $this->db->bind('nama', $data['nama']);
         $this->db->bind('email', $data['email']);
         $this->db->bind('akses', $data['akses']);
         $this->db->bind('id', $data['id']);
+        $this->db->bind('password', $defaultPassword);
 
         $this->db->execute();
 
         return $this->db->rowCount();
-        // }else{
-        //     return 0;
-        // }
 
     }
     public function getDataKeyword()

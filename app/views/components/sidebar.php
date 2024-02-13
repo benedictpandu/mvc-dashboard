@@ -121,7 +121,7 @@
             <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
             <path d="M16 3.13a4 4 0 0 1 0 7.75" />
           </svg>
-          Akun Saya
+          <?= $_SESSION['user']['nama']?>
 
           <svg class="hs-accordion-active:block ms-auto hidden w-4 h-4 text-gray-600 group-hover:text-gray-500 dark:text-gray-400" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="m18 15-6-6-6 6" />
@@ -146,25 +146,6 @@
                   <path d="m6 9 6 6 6-6" />
                 </svg>
               </button>
-              <div id="users-accordion-sub-1" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
-                <ul class="pt-2 ps-2">
-                  <li>
-                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                      Link 1
-                    </a>
-                  </li>
-                  <li>
-                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                      Link 2
-                    </a>
-                  </li>
-                  <li>
-                    <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
-                      Link 3
-                    </a>
-                  </li>
-                </ul>
-              </div>
             </li>
             <li>
               <a href="<?= BASEURL ?>/logout" class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="<?= BASEURL; ?>/users">

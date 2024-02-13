@@ -3,13 +3,13 @@ class Login extends Controller
 {
     public function index()
     {
-        $this->view('home/login');
+        $this->view('login/login');
     }
     public function auth()
     {
         if ($this->model('LoginModel')->auth($_POST) > 0) {
             Flash::setFlash('Login', 'success');
-            if($_SESSION['user']['verified'] == false){
+            if(!$_SESSION['user']['verified'] || $_SESSION['user']['verified'] == false){
                 header('Location: ' . BASEURL . '/changepassword');
             }else{
             header('Location: ' . BASEURL . '/');

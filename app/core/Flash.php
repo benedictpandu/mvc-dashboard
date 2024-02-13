@@ -2,11 +2,12 @@
 
 class Flash
 {
-    public static function setFlash($message, $type)
+    public static function setFlash($message, $type, $addOns="")
     {
         $_SESSION['flash'] = [
             'message' => $message,
-            'type' => $type
+            'type' => $type,
+            'addOns' => $addOns
 
         ];
     }
@@ -23,7 +24,7 @@ class Flash
                             </div>
                             <div class="ms-2">
                                 <div class="text-sm font-medium">'
-                                    . $_SESSION['flash']['message'] . ' <strong>gagal</strong>
+                                    . $_SESSION['flash']['message'] . ' <strong>gagal</strong>'. $_SESSION['flash']['addOns'] .'
                                 </div>
                             </div>
                             <div class="ps-3 ms-auto">
@@ -47,7 +48,7 @@ class Flash
                             </div>
                             <div class="ms-2">
                                 <div class="text-sm font-medium">'
-                                . $_SESSION['flash']['message'] . ' <strong>berhasil</strong>
+                                . $_SESSION['flash']['message'] . ' <strong>berhasil</strong>'. $_SESSION['flash']['addOns'] .'
                                 </div>
                             </div>
                             <div class="ps-3 ms-auto">
