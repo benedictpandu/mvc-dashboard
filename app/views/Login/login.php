@@ -21,7 +21,6 @@ if (isset($_SESSION["user"])) {
             <div class="p-4 sm:p-7">
                 <div class="mt-5">
                     <img src="<?= BASEURL; ?>/img/logo.png" alt="">
-                    <?=var_dump($_SESSION)?>
                     <!-- Form -->
                     <form action="<?= BASEURL ?>/login/auth" method="POST">
                         <div class="grid gap-y-4">
