@@ -10,6 +10,6 @@
 <script>
 setTimeout(function() {
 var f = document.querySelectorAll('iframe')[0];
-f.src = 'http://192.168.1.18:3000/public/dashboard/52bc6d76-c745-4581-9018-e2b15990efd3#theme=transparent&bordered=false&titled=true';
+f.src = '<?= $data['metabase']; ?>';
 }, 50);
 </script>
