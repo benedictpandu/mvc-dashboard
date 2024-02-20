@@ -3,7 +3,14 @@ class Login extends Controller
 {
     public function index()
     {
-        $this->view('login/login');
+        if (isset($_SESSION["user"])) {
+            // Redirect to the login page only if not already on the login page
+            header('Location: ' . BASEURL . '/');
+            exit(); // Make sure to exit after a header redirection
+        }else{
+            $this->view('login/login');
+        }
+        
     }
     public function auth()
     {

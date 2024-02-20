@@ -47,12 +47,12 @@
         <div id="account-accordion" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
           <ul class="pt-2 ps-2">
             <li>
-              <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+              <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="<?= BASEURL; ?>/metabase/dashboard/1">
                 Dashboard 1
               </a>
             </li>
             <li>
-              <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
+              <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="<?= BASEURL; ?>/metabase/dashboard/2">
                 Dashboard 2
               </a>
             </li>
@@ -97,11 +97,11 @@
 
         <div id="account-accordion" class="hs-accordion-content w-full overflow-hidden transition-[height] duration-300 hidden">
           <ul class="pt-2 ps-2">
-            <li>
+            <!-- <li>
               <a class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="#">
                 Daftar User
               </a>
-            </li>
+            </li> -->
             <li>
               <a href="<?= BASEURL ?>/users" class="flex items-center gap-x-3.5 py-2 px-2.5 text-[16px] text-slate-700 rounded-lg hover:bg-gray-100 dark:bg-gray-800 dark:text-slate-400 dark:hover:text-slate-300 dark:focus:outline-none dark:focus:ring-1 dark:focus:ring-gray-600" href="<?= BASEURL; ?>/users">
                 Kelola User

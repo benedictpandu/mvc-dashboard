@@ -1,12 +1,5 @@
 <!DOCTYPE html>
 <html class="h-full">
-<?php
-if (isset($_SESSION["user"])) {
-    // Redirect to the login page only if not already on the login page
-    header('Location: ' . BASEURL . '/');
-    exit(); // Make sure to exit after a header redirection
-}
-?>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
