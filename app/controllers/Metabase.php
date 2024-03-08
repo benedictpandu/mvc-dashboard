@@ -4,7 +4,7 @@ require_once __DIR__ . "/../vendor/php-jwt/src/JWT.php";
 
 class Metabase extends Controller{
  public function dashboard(int $params = 1) {
-    $metabaseSiteUrl = 'http://10.183.248.178:3000'; // URL to your Metabase installation
+    $metabaseSiteUrl = 'http://192.168.0.85:3000'; // URL to your Metabase installation
     $metabaseSecretKey = '1e6ac6bf74e84d62a372b306a36d702bef74cf1067e3059c910f818afcf2fdfb'; // The Secret Key you get from your ;etabase installation
     $payload = [
         'resource' => ['dashboard' => $params ],

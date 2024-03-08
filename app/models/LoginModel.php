@@ -1,4 +1,5 @@
 <?php
+require_once __DIR__ . "/../vendor/php-jwt/src/JWT.php";
 class LoginModel
 {
     private $table = 'users';

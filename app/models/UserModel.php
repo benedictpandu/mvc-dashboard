@@ -9,10 +9,17 @@ class UserModel
     {
         $this->db = new Database;
     }
-    public function getData()
+    public function getData($page)
     {
-        $this->db->query('SELECT * FROM ' . $this->table . ' ORDER BY id ASC');
-        return $this->db->resultSet();
+        $limitData = 10;
+        $this->db->query('SELECT * FROM ' . $this->table);
+        $data = $this->db->resultSet();
+        $countData = count($data);
+        $countPage = ceil($countData / $limitData);
+        $activePage = $page;
+        $initialData = ($limitData * $activePage) - $limitData;
+        $this->db->query('SELECT * FROM ' . $this->table . ' LIMIT ' . $limitData . ' OFFSET ' . $initialData);
+        return array($this->db->resultSet(), $countPage, $activePage);
     }
     public function getDataById($id)
     {
